@@ -1,5 +1,5 @@
 ARG osversion=xenial
-FROM ubuntu::${osversion}
+FROM ubuntu:${osversion}
 
 ARG VERSION=master
 ARG VCS_REF
