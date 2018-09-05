@@ -17,5 +17,14 @@ LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
 
 RUN apt-get update && apt-get install -y git wget unzip
 
+WORKDIR /tmp/
+RUN wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.1.0-Linux_x86_64.zip && \
+    unzip hisat2-2.1.0-Linux_x86_64.zip && \
+    mv hisat2-2.1.0 /opt/ && \
+    rm hisat2-2.1.0-Linux_x86_64.zip && \
+    ln -s /opt/hisat2* /opt/hisat
+
+ENV PATH /opt/hisat:$PATH
+
 WORKDIR /data
 
