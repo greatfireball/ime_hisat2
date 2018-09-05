@@ -15,7 +15,10 @@ LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
       org.label-schema.build-date=${BUILD_DATE} \
       org.label-schema.vcs-url="https://github.com/greatfireball/ime_hisat2.git"
 
-RUN apt-get update && apt-get install -y git wget unzip
+RUN apt-get update && apt-get install -y \
+    python \
+    wget \
+    unzip
 
 WORKDIR /tmp/
 RUN wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.1.0-Linux_x86_64.zip && \
