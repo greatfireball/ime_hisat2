@@ -1,2 +1,2 @@
-# ime_histat2
-Docker container for HiStat2 mapper
+# ime_hisat2
+Docker container for HiSat2 mapper
